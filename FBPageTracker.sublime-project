@@ -1,0 +1,35 @@
+{
+	"folders":
+	[
+		{
+			"path": "log"
+		},
+		{
+			"path": "tmp"
+		},
+		{
+			"path": "bin"
+		},
+		{
+			"path": "app"
+		},
+		{
+			"path": "config"
+		},
+		{
+			"path": "db"
+		},
+		{
+			"path": "lib"
+		},
+		{
+			"path": "public"
+		},
+		{
+			"path": "test"
+		},
+		{
+			"path": "vendor"
+		}
+	]
+}
