@@ -30,6 +30,8 @@ gem 'devise'
 # Adds ‘rest-client’ HTTP request gem
 gem 'rest-client'
 
+# Adds OmniAuth Facebook to app
+gem 'omniauth-facebook'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
