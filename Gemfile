@@ -32,6 +32,9 @@ gem 'rest-client'
 
 # Adds OmniAuth Facebook to app
 gem 'omniauth-facebook'
+
+# Adds Koala Facebook Gem
+gem "koala", "~> 2.0"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
