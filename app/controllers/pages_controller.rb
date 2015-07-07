@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_page, only: [:show, :edit, :update, :destroy]
+  before_action :set_page, only: [:show, :edit, :update, :destroy, :page_to_graph]
+
+  require 'uri'
+  require 'koala'
 
   # GET /pages
   # GET /pages.json
@@ -11,6 +14,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
+    @fb_page = page_to_graph(@page.url)
   end
 
   # GET /pages/new
@@ -62,6 +66,12 @@ class PagesController < ApplicationController
     end
   end
 
+  def page_to_graph(url)
+      graph = Koala::Facebook::API.new
+      last_path = URI(url).path.split('/').last
+      graph.get_object(last_path)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
@@ -72,4 +82,6 @@ class PagesController < ApplicationController
     def page_params
       params.require(:page).permit(:name, :url)
     end
+
+
 end
